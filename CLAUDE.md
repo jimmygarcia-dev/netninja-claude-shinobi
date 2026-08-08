@@ -2,77 +2,56 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Overview
+
+"Shinobi" is a Next.js 15 blog application built as a starter project for learning AI-assisted development with Claude Code. The app reads posts from a Hygraph GraphQL endpoint and renders them through the Next.js App Router.
+
 ## Development Commands
 
-- `npm run dev` - Start development server with Turbopack for faster builds
-- `npm run build` - Build production application
-- `npm run start` - Start production server
-- `npm run lint` - Run Next.js linting
-- `npm run test` - Run Vitest tests
-- `npm run test:ui` - Run tests with UI interface
+```bash
+npm run dev        # next dev with --turbopack (http://localhost:3000)
+npm run build      # next build
+npm run start      # next start (after build)
+npm run lint       # next lint
+npm run test       # vitest (single run)
+npm run test:ui    # vitest --ui
 
-## Architecture Overview
-
-**Shinobi** is a Next.js 15 blog application built as a Claude Code learning project. The architecture follows modern React patterns with App Router.
-
-### Key Technologies
-
-- **Next.js 15** with App Router and Turbopack
-- **React 19** with TypeScript
-- **Tailwind CSS v4** with custom CSS variables for theming
-- **Vitest** for testing with JSDOM environment
-- **DOMPurify** for HTML sanitization
-- **GraphQL** for content management via Hygraph CMS
-
-### Project Structure
-
-```
-src/
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout with header and dark mode toggle
-│   ├── page.tsx           # Homepage with navigation to blog/preview
-│   ├── blog/              # Blog listing and individual posts
-│   └── preview/           # Component preview page
-├── components/            # Reusable React components
-│   ├── ui/Button/         # Button component with variants
-│   ├── BlogSidebar.tsx    # Blog page sidebar
-│   └── DarkModeToggle.tsx # Theme switching component
-├── hooks/                 # Reusable hooks
-└── lib/                   # Utility functions and types
-    ├── queries.ts         # GraphQL queries for blog data
-    ├── types.ts           # TypeScript type definitions
-    └── sanitize.ts        # HTML sanitization utilities
+# Run a single test file or test pattern
+npx vitest src/components/ui/Button/Button.test.tsx
+npx vitest -t "calls onClick when clicked"
 ```
 
-### Data Architecture
+## Environment
 
-- **External CMS**: Uses Hygraph (GraphQL CMS) for blog content
-- **Environment Variables**: Requires `HYGRAPH_ENDPOINT` for GraphQL API
-- **Data Fetching**: Server-side rendering with 1-hour revalidation
-- **Content Security**: HTML content is sanitized using DOMPurify with strict allowlists
+Create `.env.local` with the Hygraph endpoint used by the blog fetchers:
 
-### Styling System
+```
+HYGRAPH_ENDPOINT=https://...
+```
 
-- **Custom Theme System**: CSS variables in `globals.css` with light/dark mode support
-- **Tailwind Integration**: Custom color tokens mapped to CSS variables
-- **Component Styling**: Mix of Tailwind classes and inline styles
-- **Typography**: Uses Rubik (headings) and Merriweather (body) from Google Fonts
+This variable is referenced in `src/app/blog/page.tsx` and `src/app/blog/[slug]/page.tsx` via `process.env.HYGRAPH_ENDPOINT!`. Both pages also set `next: { revalidate: 3600 }` for hourly ISR.
 
-### Testing Setup
+## Architecture
 
-- **Vitest** configured with React Testing Library
-- **JSDOM environment** for DOM testing
-- **Setup file**: `src/test/setup.ts` for test configuration
-- **Type definitions**: Custom vitest types in `src/test/vitest.d.ts`
+- **App Router** (`src/app/`) — server components by default. `src/app/page.tsx` and `src/app/preview/page.tsx` opt into the client with `"use client"`.
+  - `/` — landing page linking to `/blog` and `/preview`
+  - `/blog` — server-rendered list; `getPosts()` calls Hygraph with `GET_BLOG_POSTS`
+  - `/blog/[slug]` — server-rendered post; `getSinglePost()` calls Hygraph with `GET_SINGLE_POST`, sanitizes the HTML, and falls back to `notFound()` when the post is missing
+  - `/preview` — client component showcasing the design system
+- **Components** (`src/components/`) — feature components like `BlogSidebar` and `DarkModeToggle`, plus a UI kit under `src/components/ui/<Name>/<Name>.tsx` paired with a colocated `.test.tsx`.
+- **Library** (`src/lib/`)
+  - `queries.ts` — GraphQL query strings (`GET_BLOG_POSTS`, `GET_SINGLE_POST`)
+  - `types.ts` — `BlogPost` interface shared by pages and components
+  - `sanitize.ts` — wraps DOMPurify on a JSDOM window; `sanitizeHTML()` is required before injecting Hygraph HTML into the page via `dangerouslySetInnerHTML`
 
-## Development Notes
+## Styling & Theming
 
-- Uses `@/*` path alias for src imports
-- Blog posts require GraphQL endpoint configuration
-- Dark mode state is managed via CSS classes on root element
-- Component testing follows React Testing Library patterns
-- HTML sanitization is critical for security when displaying CMS content
+`src/app/globals.css` defines the theme. `:root` and `:root.dark` set CSS variables (`--background`, `--foreground`, `--primary`, `--secondary`, `--accent`, `--muted`, `--success`, `--warning`, `--danger`, `--info`, `--surface`, `--border`); Tailwind's `@theme` block exposes them as `bg-primary`, `text-foreground`, etc. The dark variant is toggled by adding/removing the `dark` class on `document.documentElement` — see `DarkModeToggle.tsx`. Body uses Rubik; `h1`/`h2` use Merriweather.
 
-- when making new page components, always add a link to that page in the header. Only do this for page components, not UI or other drop-in components.
+## Testing
 
-- Use Context7 to check up-to-date docs when needed for implementing new libraries or frameworks, or adding features using them.
+Vitest runs under JSDOM (`vitest.config.mts`) with `src/test/setup.ts` wiring up `@testing-library/jest-dom` matchers. Follow the colocated pattern: put `<Name>.test.tsx` next to the component (see `src/components/ui/Button/`). Tests use `afterEach(cleanup)` from `@testing-library/react` to avoid cross-test DOM bleed.
+
+## Conventions
+
+- When adding a new page to `src/app/`, also add a link to it from the header in `src/app/layout.tsx` so the new route is discoverable from every page.

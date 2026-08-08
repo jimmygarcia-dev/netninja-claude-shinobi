@@ -18,6 +18,7 @@
   --info: #3b82f6;
   --surface: #ffffff;
   --border: #e5e7eb;
+  --highlight: #fef9c3;
 }
 
 :root.dark {

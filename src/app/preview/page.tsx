@@ -1,5 +1,7 @@
 "use client";
 import Button from "@/components/ui/Button/Button";
+import Badge from "@/components/ui/Badge/Badge";
+import Icon from "@/components/ui/Icon/Icon";
 
 export default function Preview() {
   return (
@@ -97,6 +99,161 @@ export default function Preview() {
           Delete Account
         </Button>
       </div>
+      </section>
+
+      <section>
+        <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Badge Variants</h2>
+        <p style={{ marginBottom: '1.5rem', maxWidth: '500px' }}>
+          Compact labels for tags, statuses, and counts. Each variant uses a tinted background so they read well on both light and dark surfaces.
+        </p>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Colours</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+          <Badge variant="primary">Primary</Badge>
+          <Badge variant="secondary">Secondary</Badge>
+          <Badge variant="success">Success</Badge>
+          <Badge variant="danger">Danger</Badge>
+          <Badge variant="warning">Warning</Badge>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Sizes</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '2rem' }}>
+          <Badge variant="primary" size="sm">Small</Badge>
+          <Badge variant="primary" size="md">Medium</Badge>
+          <Badge variant="primary" size="lg">Large</Badge>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Disabled</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+          <Badge variant="primary" disabled>Primary</Badge>
+          <Badge variant="success" disabled>Success</Badge>
+          <Badge variant="danger" disabled>Danger</Badge>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Real-world examples</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Badge variant="success">Active</Badge>
+          <Badge variant="warning">Pending</Badge>
+          <Badge variant="danger">Failed</Badge>
+          <Badge variant="secondary">Draft</Badge>
+          <Badge variant="primary">v1.0</Badge>
+        </div>
+      </section>
+
+      <section>
+        <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Icon Variants</h2>
+        <p style={{ marginBottom: '1.5rem', maxWidth: '500px' }}>
+          Circular icon containers that tint with the theme colours. Pass any SVG (or glyph) as children — the wrapper handles background, sizing, and colour.
+        </p>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Colours</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+          <Icon variant="primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </Icon>
+          <Icon variant="secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </Icon>
+          <Icon variant="success">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </Icon>
+          <Icon variant="danger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="15" y1="9" x2="9" y2="15" />
+              <line x1="9" y1="9" x2="15" y2="15" />
+            </svg>
+          </Icon>
+          <Icon variant="warning">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </Icon>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Sizes</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '2rem' }}>
+          <Icon variant="primary" size="sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </Icon>
+          <Icon variant="primary" size="md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="5" />
+            </svg>
+          </Icon>
+          <Icon variant="primary" size="lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="7" />
+            </svg>
+          </Icon>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Disabled</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+          <Icon variant="primary" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            </svg>
+          </Icon>
+          <Icon variant="success" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </Icon>
+          <Icon variant="danger" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="15" y1="9" x2="9" y2="15" />
+              <line x1="9" y1="9" x2="15" y2="15" />
+            </svg>
+          </Icon>
+        </div>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Real-world examples</h3>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Icon variant="success">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </Icon>
+          <Icon variant="danger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </Icon>
+          <Icon variant="primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </Icon>
+          <Icon variant="warning">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </Icon>
+          <Icon variant="secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
+          </Icon>
+        </div>
       </section>
 
       <section style={{ marginTop: '3rem' }}>

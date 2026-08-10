@@ -55,3 +55,11 @@ Vitest runs under JSDOM (`vitest.config.mts`) with `src/test/setup.ts` wiring up
 ## Conventions
 
 - When adding a new page to `src/app/`, also add a link to it from the header in `src/app/layout.tsx` so the new route is discoverable from every page.
+
+## Development Notes
+- Uses `@/*` path alias for src imports
+- Blog posts require GraphQL endpoint configuration
+- Dark mode state is managed via CSS classes on root element
+- Component testing follows React Testing Library patterns
+- HTML sanitization is critical for security when displaying CMS content
+- when making new page components, always add a link to that page in the header. Only do this for page components, not UI or other drop-in components.

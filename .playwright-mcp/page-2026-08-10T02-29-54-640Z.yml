@@ -1,0 +1,108 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Shinobi" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - link "Blog" [ref=e6] [cursor=pointer]:
+          - /url: /blog
+        - link "About" [ref=e7] [cursor=pointer]:
+          - /url: /about
+        - link "Preview" [ref=e8] [cursor=pointer]:
+          - /url: /preview
+    - button "Switch to dark mode" [ref=e9] [cursor=pointer]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "Typography & Theme Showcase" [level=1] [ref=e14]
+      - paragraph [ref=e15]: This page demonstrates our custom theme with beautiful typography pairing. Headings use the elegant Playfair Display serif font, while body text uses the clean and modern Rubik sans-serif font.
+    - generic [ref=e16]:
+      - heading "Design System Colors" [level=2] [ref=e17]
+      - paragraph [ref=e18]: Our theme features a purple primary color with carefully chosen complementary colors for success, warning, and danger states. The system automatically adapts between light and dark modes.
+    - generic [ref=e19]:
+      - heading "Interactive Components" [level=2] [ref=e20]
+      - paragraph [ref=e21]: Our button components showcase the theme colors in action with hover effects and focus states.
+      - generic [ref=e22]:
+        - button "Primary Button" [ref=e24]
+        - button "Secondary Button" [ref=e26]
+        - button "Success Button" [ref=e28]
+        - button "Warning Button" [ref=e30]
+        - button "Danger Button" [ref=e32]
+      - heading "Disabled States" [level=3] [ref=e33]
+      - paragraph [ref=e34]: All button variants maintain consistent styling when disabled, with reduced opacity for clear visual feedback.
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - button "Primary Disabled" [disabled]
+        - generic [ref=e37]:
+          - button "Secondary Disabled" [disabled]
+        - generic [ref=e38]:
+          - button "Success Disabled" [disabled]
+        - generic [ref=e39]:
+          - button "Warning Disabled" [disabled]
+        - generic [ref=e40]:
+          - button "Danger Disabled" [disabled]
+      - heading "Practical Examples" [level=3] [ref=e41]
+      - paragraph [ref=e42]: Real-world button implementations showing different types and interactive behaviors.
+      - generic [ref=e43]:
+        - button "Submit Form" [ref=e45]
+        - button "Reset Form" [ref=e47]
+        - button "Save Changes" [ref=e49]
+        - button "Proceed with Caution" [ref=e51]
+        - button "Delete Account" [ref=e53]
+    - generic [ref=e54]:
+      - heading "Badge Variants" [level=2] [ref=e55]
+      - paragraph [ref=e56]: Compact labels for tags, statuses, and counts. Each variant uses a tinted background so they read well on both light and dark surfaces.
+      - heading "Colours" [level=3] [ref=e57]
+      - generic [ref=e58]:
+        - generic [ref=e59]: Primary
+        - generic [ref=e60]: Secondary
+        - generic [ref=e61]: Success
+        - generic [ref=e62]: Danger
+        - generic [ref=e63]: Warning
+      - heading "Sizes" [level=3] [ref=e64]
+      - generic [ref=e65]:
+        - generic [ref=e66]: Small
+        - generic [ref=e67]: Medium
+        - generic [ref=e68]: Large
+      - heading "Disabled" [level=3] [ref=e69]
+      - generic [ref=e70]:
+        - generic [ref=e71]: Primary
+        - generic [ref=e72]: Success
+        - generic [ref=e73]: Danger
+      - heading "Real-world examples" [level=3] [ref=e74]
+      - generic [ref=e75]:
+        - generic [ref=e76]: Active
+        - generic [ref=e77]: Pending
+        - generic [ref=e78]: Failed
+        - generic [ref=e79]: Draft
+        - generic [ref=e80]: v1.0
+    - generic [ref=e81]:
+      - heading "Icon Variants" [level=2] [ref=e82]
+      - paragraph [ref=e83]: Circular icon containers that tint with the theme colours. Pass any SVG (or glyph) as children — the wrapper handles background, sizing, and colour.
+      - heading "Colours" [level=3] [ref=e84]
+      - heading "Sizes" [level=3] [ref=e106]
+      - heading "Disabled" [level=3] [ref=e117]
+      - heading "Real-world examples" [level=3] [ref=e130]
+    - generic [ref=e149]:
+      - heading "Modal Component" [level=2] [ref=e150]
+      - paragraph [ref=e151]: A clean, modern modal with a semi-transparent backdrop, focus trap, ESC-to-dismiss, and backdrop click-to-close. Each variant tints the header strip and title.
+      - generic [ref=e152]:
+        - heading "Variants" [level=3] [ref=e153]
+        - generic [ref=e154]:
+          - button "Open Primary" [ref=e156]
+          - button "Open Secondary" [ref=e159]
+          - button "Open Success" [ref=e162]
+          - button "Open Danger" [ref=e165]
+          - button "Open Warning" [ref=e168]
+        - heading "Sizes" [level=3] [ref=e170]
+        - generic [ref=e171]:
+          - button "Small" [ref=e173]
+          - button "Medium" [ref=e175]
+          - button "Large" [ref=e177]
+    - generic [ref=e178]:
+      - heading "Typography Hierarchy" [level=2] [ref=e179]
+      - generic [ref=e180]:
+        - heading "Main Heading (H1)" [level=1] [ref=e181]
+        - heading "Section Heading (H2)" [level=2] [ref=e182]
+        - heading "Subsection Heading (H3)" [level=3] [ref=e183]
+        - paragraph [ref=e184]: This is regular paragraph text using Rubik. It's clean, readable, and pairs beautifully with the Playfair Display headings. The contrast between the geometric sans-serif and elegant serif creates visual interest while maintaining excellent readability.
+        - paragraph [ref=e185]: This is smaller text in muted color, perfect for captions or secondary information.

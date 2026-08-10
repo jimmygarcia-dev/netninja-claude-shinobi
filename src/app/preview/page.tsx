@@ -1,7 +1,112 @@
 "use client";
+import { useState } from "react";
 import Button from "@/components/ui/Button/Button";
 import Badge from "@/components/ui/Badge/Badge";
 import Icon from "@/components/ui/Icon/Icon";
+import Modal from "@/components/ui/Modal/Modal";
+
+// Modal preview helper. Two groups of triggers: one opens a different
+// variant, the other opens the same modal at three sizes. The state is
+// stored as a single object so only one modal is ever open at a time.
+function ModalShowcase() {
+  const variants = [
+    { key: "primary", label: "Primary" },
+    { key: "secondary", label: "Secondary" },
+    { key: "success", label: "Success" },
+    { key: "danger", label: "Danger" },
+    { key: "warning", label: "Warning" },
+  ] as const;
+
+  const sizes = [
+    { key: "sm", label: "Small" },
+    { key: "md", label: "Medium" },
+    { key: "lg", label: "Large" },
+  ] as const;
+
+  type VariantKey = typeof variants[number]["key"];
+  type SizeKey = typeof sizes[number]["key"];
+
+  const [active, setActive] = useState<
+    | { kind: "variant"; key: VariantKey }
+    | { kind: "size"; key: SizeKey }
+    | null
+  >(null);
+
+  const close = () => setActive(null);
+
+  return (
+    <div>
+      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Variants</h3>
+      <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+        {variants.map((v) => (
+          <Button
+            key={v.key}
+            variant={v.key}
+            onClick={() => setActive({ kind: "variant", key: v.key })}
+          >
+            Open {v.label}
+          </Button>
+        ))}
+      </div>
+
+      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>Sizes</h3>
+      <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+        {sizes.map((s) => (
+          <Button
+            key={s.key}
+            variant="primary"
+            onClick={() => setActive({ kind: "size", key: s.key })}
+          >
+            {s.label}
+          </Button>
+        ))}
+      </div>
+
+      {variants.map((v) => (
+        <Modal
+          key={v.key}
+          open={active?.kind === "variant" && active.key === v.key}
+          onClose={close}
+          variant={v.key}
+          title={`${v.label} modal`}
+          description="This is a description that explains the purpose of the modal."
+          footer={
+            <>
+              <Button variant="secondary" onClick={close}>Cancel</Button>
+              <Button variant={v.key} onClick={close}>Confirm</Button>
+            </>
+          }
+        >
+          <p>
+            Press <strong>Escape</strong>, click the backdrop, or use the close
+            button to dismiss this modal. Focus is trapped inside while it&apos;s
+            open and restored to the trigger when it closes.
+          </p>
+        </Modal>
+      ))}
+
+      {sizes.map((s) => (
+        <Modal
+          key={s.key}
+          open={active?.kind === "size" && active.key === s.key}
+          onClose={close}
+          size={s.key}
+          variant="primary"
+          title={`Size: ${s.label}`}
+          footer={
+            <Button variant="primary" onClick={close}>Close</Button>
+          }
+        >
+          <p>
+            This modal is rendered at the <strong>{s.key}</strong> size. The
+            panel stays centred on every viewport, and the body content
+            scrolls if it exceeds the available height.
+          </p>
+        </Modal>
+      ))}
+    </div>
+  );
+}
 
 export default function Preview() {
   return (
@@ -254,6 +359,15 @@ export default function Preview() {
             </svg>
           </Icon>
         </div>
+      </section>
+
+      <section style={{ marginTop: '3rem' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Modal Component</h2>
+        <p style={{ marginBottom: '1.5rem', maxWidth: '500px' }}>
+          A clean, modern modal with a semi-transparent backdrop, focus trap, ESC-to-dismiss, and backdrop click-to-close. Each variant tints the header strip and title.
+        </p>
+
+        <ModalShowcase />
       </section>
 
       <section style={{ marginTop: '3rem' }}>

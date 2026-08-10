@@ -1,0 +1,282 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "NMDA Solutions - Desarrollo Web y Software Empresarial" [ref=e6]
+        - generic [ref=e7]: Software & Digital Solutions
+      - navigation [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Inicio" [ref=e11] [cursor=pointer]:
+              - /url: "#mainheader"
+          - listitem [ref=e12]:
+            - link "Nosotros" [ref=e13] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e14]:
+            - link "Servicios" [ref=e15] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=e16]:
+            - link "NMDA Events" [ref=e17] [cursor=pointer]:
+              - /url: "#events"
+          - listitem [ref=e18]:
+            - link "Planes" [ref=e19] [cursor=pointer]:
+              - /url: "#plans"
+          - listitem [ref=e20]:
+            - link "Portafolio" [ref=e21] [cursor=pointer]:
+              - /url: "#portfolio"
+          - listitem [ref=e22]:
+            - link "Agendar llamada" [ref=e23] [cursor=pointer]:
+              - /url: "#contact"
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: 🚀 Desarrollo Web • Software Empresarial • Plataformas SaaS
+      - heading "Tecnología diseñada para hacer crecer tu negocio." [level=1] [ref=e31]
+      - paragraph [ref=e32]: En NMDA Solutions desarrollamos sitios web, software empresarial y plataformas SaaS que ayudan a empresas a operar mejor, captar clientes y escalar con soluciones digitales modernas.
+      - generic [ref=e33]:
+        - link "Agendar llamada" [ref=e34] [cursor=pointer]:
+          - /url: "#contact"
+        - link "Ver proyectos" [ref=e35] [cursor=pointer]:
+          - /url: "#portfolio"
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - strong [ref=e38]: "+15"
+          - text: Proyectos desarrollados
+        - generic [ref=e39]:
+          - strong [ref=e40]: 100%
+          - text: Diseño responsive
+        - generic [ref=e41]:
+          - strong [ref=e42]: SaaS
+          - text: Productos propios en operación
+    - generic [ref=e44]:
+      - generic [ref=e45]: NMDA Events
+      - img "NMDA Events - Plataforma para eventos corporativos" [ref=e51]
+  - generic [ref=e53]:
+    - generic [ref=e54]:
+      - generic [ref=e55]: Sobre NMDA
+      - heading "Construimos software que resuelve problemas reales." [level=2] [ref=e56]
+      - paragraph [ref=e57]: Ayudamos a empresas y emprendedores a digitalizar procesos, automatizar operaciones y crear productos tecnológicos preparados para crecer.
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - heading "15+" [level=3] [ref=e60]
+        - generic [ref=e61]: Años construyendo soluciones tecnológicas
+      - generic [ref=e62]:
+        - heading "SaaS" [level=3] [ref=e63]
+        - generic [ref=e64]: Productos propios listos para escalar
+      - generic [ref=e65]:
+        - heading "Web" [level=3] [ref=e66]
+        - generic [ref=e67]: Plataformas modernas y de alto rendimiento
+      - generic [ref=e68]:
+        - heading "100%" [level=3] [ref=e69]
+        - generic [ref=e70]: Enfoque en automatización y eficiencia
+  - generic [ref=e72]:
+    - generic [ref=e73]:
+      - generic [ref=e74]: Servicios
+      - heading "Tecnología diseñada para generar resultados" [level=2] [ref=e75]
+      - paragraph [ref=e76]: Desde presencia digital hasta plataformas empresariales, desarrollamos soluciones enfocadas en crecimiento, automatización y escalabilidad.
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - heading "Desarrollo Web" [level=3] [ref=e79]
+        - paragraph [ref=e80]: Landing pages, sitios corporativos y experiencias web rápidas, modernas y optimizadas para conversión.
+      - generic [ref=e81]:
+        - heading "Software Empresarial" [level=3] [ref=e82]
+        - paragraph [ref=e83]: Aplicaciones web, dashboards e integraciones para automatizar procesos y mejorar la operación de tu negocio.
+      - generic [ref=e84]:
+        - heading "Plataformas SaaS" [level=3] [ref=e85]
+        - paragraph [ref=e86]: Diseño y desarrollo de productos SaaS preparados para crecer, escalar y convertirse en nuevas líneas de negocio.
+  - generic [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]: NMDA Events
+      - heading "Todo lo que necesitas para operar un evento desde un solo lugar." [level=2] [ref=e91]
+      - paragraph [ref=e92]: Gestiona asistentes, automatiza la comunicación con campañas, realiza check-in, presenta encuestas en vivo y analiza el comportamiento de tu evento desde una plataforma moderna diseñada para equipos de operación.
+      - generic [ref=e93]:
+        - generic [ref=e94]: Registro digital
+        - generic [ref=e95]: Check-in
+        - generic [ref=e96]: Campañas
+        - generic [ref=e97]: Encuestas
+        - generic [ref=e98]: Presentaciones en vivo
+        - generic [ref=e99]: Analytics
+      - generic [ref=e100]:
+        - link "Ver plataforma" [ref=e101] [cursor=pointer]:
+          - /url: https://events.nmdasolutions.com
+        - link "Agendar demo" [ref=e102] [cursor=pointer]:
+          - /url: "#contact"
+    - img "NMDA Events - Plataforma para eventos corporativos" [ref=e104]
+  - generic [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]: Planes
+      - heading "Soluciones para cada etapa de tu negocio" [level=2] [ref=e109]
+      - paragraph [ref=e110]: Desde una landing profesional hasta plataformas web y soluciones para eventos corporativos.
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - generic [ref=e113]: Ideal para comenzar
+        - heading "Landing Estratégica" [level=3] [ref=e114]
+        - paragraph [ref=e115]: Presencia digital profesional enfocada en conversión.
+        - strong [ref=e116]: Desde $12,900 MXN
+        - list [ref=e117]:
+          - listitem [ref=e118]: ✓ Landing page moderna
+          - listitem [ref=e119]: ✓ Formulario + WhatsApp
+          - listitem [ref=e120]: ✓ Diseño responsive
+          - listitem [ref=e121]: ✓ SEO técnico básico
+          - listitem [ref=e122]: ✓ Dominio + hosting 1 año
+        - link "Solicitar propuesta" [ref=e123] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e124]:
+        - generic [ref=e125]: Más solicitado
+        - heading "Sitio Corporativo" [level=3] [ref=e126]
+        - paragraph [ref=e127]: Para empresas que buscan confianza y presencia profesional.
+        - strong [ref=e128]: Desde $29,900 MXN
+        - list [ref=e129]:
+          - listitem [ref=e130]: ✓ Hasta 8 secciones
+          - listitem [ref=e131]: ✓ Diseño UI/UX profesional
+          - listitem [ref=e132]: ✓ WhatsApp + formularios
+          - listitem [ref=e133]: ✓ SEO optimizado
+          - listitem [ref=e134]: ✓ Panel autoadministrable básico
+        - link "Solicitar propuesta" [ref=e135] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e136]:
+        - generic [ref=e137]: Solución premium
+        - heading "Plataforma Web" [level=3] [ref=e138]
+        - paragraph [ref=e139]: Software a medida para automatizar procesos y escalar operaciones.
+        - strong [ref=e140]: Desde $69,900 MXN
+        - list [ref=e141]:
+          - listitem [ref=e142]: ✓ Sistema web personalizado
+          - listitem [ref=e143]: ✓ Dashboard administrativo
+          - listitem [ref=e144]: ✓ Roles y permisos
+          - listitem [ref=e145]: ✓ Integraciones y APIs
+          - listitem [ref=e146]: ✓ Arquitectura escalable
+        - link "Solicitar propuesta" [ref=e147] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e148]:
+        - generic [ref=e149]: Plataforma SaaS
+        - heading "NMDA Events" [level=3] [ref=e150]
+        - paragraph [ref=e151]: Plataforma para gestionar eventos corporativos de forma autónoma, desde el registro hasta la analítica en tiempo real.
+        - strong [ref=e152]: Agendar demostración
+        - list [ref=e153]:
+          - listitem [ref=e154]: ✓ Registro en línea
+          - listitem [ref=e155]: ✓ Check-in digital
+          - listitem [ref=e156]: ✓ Campañas para asistentes
+          - listitem [ref=e157]: ✓ Encuestas en tiempo real
+          - listitem [ref=e158]: ✓ Analytics y reportes
+        - link "Agendar demo" [ref=e159] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e160]:
+        - generic [ref=e161]: Servicio Premium
+        - heading "NMDA Events Premium" [level=3] [ref=e162]
+        - paragraph [ref=e163]: La plataforma acompañada por nuestro equipo para asegurar una operación impecable antes, durante y después del evento.
+        - strong [ref=e164]: Agendar demostración
+        - list [ref=e165]:
+          - listitem [ref=e166]: ✓ Todo lo incluido en NMDA Events
+          - listitem [ref=e167]: ✓ Presentaciones y encuestas en vivo
+          - listitem [ref=e168]: ✓ Configuración previa del evento
+          - listitem [ref=e169]: ✓ Acompañamiento durante la operación
+          - listitem [ref=e170]: ✓ Soporte prioritario
+        - link "Agendar demo" [ref=e171] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]: Portafolio
+      - heading "Soluciones desarrolladas para problemas reales" [level=2] [ref=e176]
+      - paragraph [ref=e177]: Creamos plataformas, sitios y herramientas digitales enfocadas en operación, automatización y crecimiento.
+    - generic [ref=e178]:
+      - article [ref=e179]:
+        - img "NMDA Events - Plataforma de gestión de eventos" [ref=e181]
+        - generic [ref=e182]:
+          - generic [ref=e183]: SaaS · Eventos
+          - heading "NMDA Events" [level=3] [ref=e184]
+          - paragraph [ref=e185]: Plataforma para administrar asistentes, invitaciones, check-in, encuestas y operación de eventos en tiempo real.
+          - generic [ref=e186]:
+            - generic [ref=e187]: Vue
+            - generic [ref=e188]: Node.js
+            - generic [ref=e189]: Firebase
+            - generic [ref=e190]: SaaS
+          - link "Ver plataforma →" [ref=e191] [cursor=pointer]:
+            - /url: https://events.nmdasolutions.com
+      - article [ref=e192]:
+        - img "Sitio corporativo para empresa" [ref=e194]
+        - generic [ref=e195]:
+          - generic [ref=e196]: Web Corporativa
+          - heading "Sitio corporativo" [level=3] [ref=e197]
+          - paragraph [ref=e198]: Presencia digital moderna con enfoque SEO, rendimiento y generación de contactos comerciales.
+          - generic [ref=e199]:
+            - generic [ref=e200]: SEO
+            - generic [ref=e201]: Responsive
+            - generic [ref=e202]: UX/UI
+      - article [ref=e203]:
+        - img "Plataforma de venta online" [ref=e205]
+        - generic [ref=e206]:
+          - generic [ref=e207]: E-commerce
+          - heading "Tienda online personalizada" [level=3] [ref=e208]
+          - paragraph [ref=e209]: Catálogo, administración y experiencia de compra diseñada para convertir visitantes en clientes.
+          - generic [ref=e210]:
+            - generic [ref=e211]: Catálogo
+            - generic [ref=e212]: Pagos
+            - generic [ref=e213]: Admin
+      - article [ref=e214]:
+        - img "Landing page para coach de vida" [ref=e216]
+        - generic [ref=e217]:
+          - generic [ref=e218]: Landing Page
+          - heading "Life Coaching Landing" [level=3] [ref=e219]
+          - paragraph [ref=e220]: Landing page profesional para coach de vida, diseñada para transmitir confianza, presentar servicios y convertir visitantes en clientes.
+          - generic [ref=e221]:
+            - generic [ref=e222]: Landing
+            - generic [ref=e223]: UX/UI
+            - generic [ref=e224]: Responsive
+            - generic [ref=e225]: Conversión
+  - generic [ref=e227]:
+    - generic [ref=e228]:
+      - generic [ref=e229]: Contacto
+      - heading "Hablemos de tu próximo proyecto" [level=2] [ref=e230]
+      - paragraph [ref=e231]: Agenda una llamada de 30 minutos para conocer tus objetivos, resolver tus dudas y descubrir la mejor solución para tu empresa o evento.
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]: Primera reunión sin costo
+        - heading "Agenda una llamada" [level=3] [ref=e235]
+        - paragraph [ref=e236]: Selecciona el horario que mejor te funcione y cuéntanos brevemente qué deseas desarrollar. Prepararemos la reunión para aprovechar al máximo nuestro tiempo juntos.
+        - link "Agendar llamada" [ref=e237] [cursor=pointer]:
+          - /url: https://calendly.com/jimmygarcia-dev/30min
+      - generic [ref=e238]:
+        - generic [ref=e239]:
+          - heading "¿Cómo trabajamos?" [level=3] [ref=e240]
+          - list [ref=e241]:
+            - listitem [ref=e242]: ✓ Agenda una llamada.
+            - listitem [ref=e243]: ✓ Analizamos tus necesidades.
+            - listitem [ref=e244]: ✓ Recibes una propuesta personalizada.
+            - listitem [ref=e245]: ✓ Comenzamos el desarrollo.
+        - generic [ref=e246]:
+          - heading "NMDA Events" [level=3] [ref=e247]
+          - paragraph [ref=e248]: ¿Buscas una plataforma para registrar asistentes, realizar check-in y administrar eventos corporativos?
+          - link "Conocer la plataforma" [ref=e249] [cursor=pointer]:
+            - /url: https://events.nmdasolutions.com
+  - contentinfo [ref=e250]:
+    - generic [ref=e251]:
+      - generic [ref=e252]:
+        - img "NMDA Solutions" [ref=e253]
+        - paragraph [ref=e254]: Desarrollo web, software empresarial y plataformas SaaS para empresas que buscan crecer mediante tecnología.
+      - generic [ref=e255]:
+        - heading "Explorar" [level=4] [ref=e256]
+        - link "Nosotros" [ref=e257] [cursor=pointer]:
+          - /url: "#about"
+        - link "Servicios" [ref=e258] [cursor=pointer]:
+          - /url: "#services"
+        - link "NMDA Events" [ref=e259] [cursor=pointer]:
+          - /url: "#events"
+        - link "Planes" [ref=e260] [cursor=pointer]:
+          - /url: "#plans"
+        - link "Portafolio" [ref=e261] [cursor=pointer]:
+          - /url: "#portfolio"
+      - generic [ref=e262]:
+        - heading "Comencemos" [level=4] [ref=e263]
+        - paragraph [ref=e264]: La mejor forma de iniciar es agendando una breve llamada.
+        - link "Agendar una llamada" [ref=e265] [cursor=pointer]:
+          - /url: https://calendly.com/jimmygarcia-dev/30min
+        - generic [ref=e266]: Ciudad de México, México
+        - generic [ref=e267]:
+          - link "LinkedIn" [ref=e268] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/jimmygarcia-dev
+          - link "GitHub" [ref=e271] [cursor=pointer]:
+            - /url: https://github.com/jimmygarcia-dev
+          - link "Facebook" [ref=e274] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61576049581278
+    - paragraph [ref=e278]: © 2026 NMDA Solutions. Todos los derechos reservados.
